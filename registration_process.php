@@ -106,8 +106,7 @@ function sendSms($phone, $otp, $first_name, $middle_name, $last_name) {
  
     //Define route 
     $route = "4";
-    //$MSG91_AUTH_KEY="180706AmGQpE6NW59f06fed";
-    //API SANTANU ROY
+    
     $MSG91_AUTH_KEY="204451A8TreDUv6Lm5aafb222";
 	$MSG91_SENDER_ID="Campus";
     //Prepare you post parameters
