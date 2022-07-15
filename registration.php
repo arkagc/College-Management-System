@@ -4,116 +4,110 @@
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <link rel="icon" href="images/favicon.ico">
-    <title>User Registration | College Campus</title>
+    <title>College Campus</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--CSS-->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--JS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <style type="text/css">
-    #background{
-        background:url("images/bg3.jpg");
-        width: 100%;
-   }
-    
-    h1{
-       text-align:center;
-	   color:white;
-	   font-family:Gabriola;
-	   font-size:45px;
-	   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-   }
-
-        
-    .btn_confirm{
-        border-radius: 4px;
-        background-color: #33adff;
-        border: none;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 20px;
-        padding: 6px;
-        width: 100px;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 5px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .btn_confirm span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-    }
-
-    .btn_confirm span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -20px;
-        transition: 0.5s;
-    }
-
-    .btn_confirm:hover span {
-        padding-right: 25px;
-    }
-
-    .btn_confirm:hover span:after {
-        opacity: 1;
-        right: 0;
-     }
+        #background{
+            background:url("images/bg3.jpg");
+            width: 100%;
+        }
+        h1{
+            text-align:center;
+            color:white;
+            font-family:Gabriola;
+            font-size:45px;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+        .btn_confirm{
+            border-radius: 4px;
+            background-color: #33adff;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            padding: 6px;
+            width: 100px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .btn_confirm span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        .btn_confirm span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        .btn_confirm:hover span {
+            padding-right: 25px;
+        }
+        .btn_confirm:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
         .btn_confirm:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4), 0 6px 20px 0 rgba(0,0,0,0.19);
         }
            
-    .btn_clear {
-        border-radius: 4px;
-        background-color: #cc3300;
-        border: none;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 20px;
-        padding: 6px;
-        width: 100px;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 5px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .btn_clear span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-    }
-
-    .btn_clear span:after {
-        content: 'x';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -20px;
-        transition: 0.5s;
-    }
-
-    .btn_clear:hover span {
-        padding-right: 25px;
-    }
-
-    .btn_clear:hover span:after {
-        opacity: 1;
-        right: 0;
-     }
+        .btn_clear {
+            border-radius: 4px;
+            background-color: #cc3300;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            padding: 6px;
+            width: 100px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .btn_clear span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        .btn_clear span:after {
+            content: 'x';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        .btn_clear:hover span {
+            padding-right: 25px;
+        }
+        .btn_clear:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
         .btn_clear:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4), 0 6px 20px 0 rgba(0,0,0,0.4);
         }
@@ -160,48 +154,45 @@
         {
             var length=frm.end_year.length;
             for (var i=length-1;i>=0;i--)
-                {
-                    frm.end_year.remove(i);
-                }
+            {
+                frm.end_year.remove(i);
+            }
             var k=0;
-             
-             var min_year=current_year-3;
+            var min_year=current_year-3;
             //alert(min_year);
             frm.end_year.remove(0);
             
             if(frm.start_year.selectedIndex!=0)
             {
-               k=Number(min_year+frm.start_year.selectedIndex);
-                      
-                var j=0;
+               k=Number(min_year+frm.start_year.selectedIndex);  
+               var j=0;
                for (j=k;j<=k+3;j++)
-                    {
-                      var op2=new Option(j)
-                      frm.end_year.add(op2)
-                      frm.end_year.selectedIndex=0
-            }
-        
+                {
+                    var op2=new Option(j)
+                    frm.end_year.add(op2)
+                    frm.end_year.selectedIndex=0
+                }
             }
         }
         
         function upperChar() {
-        var f = document.getElementById("fname");
-        f.value = f.value.toUpperCase();
-            
-        var m = document.getElementById("mname");
-        m.value = m.value.toUpperCase();
-            
-        var l = document.getElementById("lname");
-        l.value = l.value.toUpperCase();
-            
-        var u = document.getElementById("usid");
-        u.value = u.value.toUpperCase();
-            
-        var ad = document.getElementById("addr");
-        ad.value = ad.value.toUpperCase();
-            
-        var h = document.getElementById("hob");
-        h.value = h.value.toUpperCase();
+            var f = document.getElementById("fname");
+            f.value = f.value.toUpperCase();
+                
+            var m = document.getElementById("mname");
+            m.value = m.value.toUpperCase();
+                
+            var l = document.getElementById("lname");
+            l.value = l.value.toUpperCase();
+                
+            var u = document.getElementById("usid");
+            u.value = u.value.toUpperCase();
+                
+            var ad = document.getElementById("addr");
+            ad.value = ad.value.toUpperCase();
+                
+            var h = document.getElementById("hob");
+            h.value = h.value.toUpperCase();
         }
         
         function lowerChar(){
@@ -216,15 +207,14 @@
         {
             var f_name=document.getElementById("fname").value;
                 
-                if(f_name==""){
-                    document.getElementById("fname_error").innerHTML=" First Name cannot be blank";
-                    document.frm.fname.focus();
-                    return false;
-                }
+            if(f_name==""){
+                document.getElementById("fname_error").innerHTML=" First Name cannot be blank";
+                document.frm.fname.focus();
+                return false;
+            }
             else{
                document.getElementById("fname_error").innerHTML=""; 
             }
-
         }
         function validate(){
             //First Name Validation
@@ -240,10 +230,10 @@
                 for(i=0;i<f_name.length;i++){
                      chr1=f_name.substr(i,1);
                     if(!(chr1>='A' && chr1<='Z') && !(chr1>='a' && chr1<='z')){
-                    document.getElementById("fname_error").innerHTML="Please enter valid First Name";
-                    document.frm.fname.focus();
-                    return false;
-                }    
+                        document.getElementById("fname_error").innerHTML="Please enter valid First Name";
+                        document.frm.fname.focus();
+                        return false;
+                    }    
                 }
             //Middle Name Validation
                 var m_name=document.getElementById("mname").value;
@@ -270,55 +260,30 @@
                 for(k=0;k<l_name.length;k++){
                      chr3=l_name.substr(k,1);
                     if(!(chr3>='A' && chr3<='Z') && !(chr3>='a' && chr3<='z')){
-                    document.getElementById("lname_error").innerHTML="Please enter valid Last Name";
-                    document.frm.lname.focus();
-                    return false;
-                }    
+                        document.getElementById("lname_error").innerHTML="Please enter valid Last Name";
+                        document.frm.lname.focus();
+                        return false;
+                    }    
                 }
-            //User Id Validation
-            
-            //New Password Validation
-            
-            //Confirm Password Validation
-            
-            //Vil/town/city Validation
-            
-            //State Validation
-            
-            //Postal Code Validation
-            
-            //Email Adress Validation
-            
-            //Phone Number Validation
-            
-            //Date of Birth Validation
-            
-            //Hobby Validation
-            
-            //Dept/Section Validation
-            
-            //Designation Validation
         }
         
         function abc(){
-        
-                            if (document.getElementById("desg").value=="Student")
-                                {
-                                    document.getElementById("start_year").disabled=false;
-                                    document.getElementById("end_year").disabled=false;
-                                }
-                            else{
-                                document.getElementById("start_year").disabled=true;
-                                document.getElementById("end_year").disabled=true;
-                            }
+            if (document.getElementById("desg").value=="Student")
+                {
+                    document.getElementById("start_year").disabled=false;
+                    document.getElementById("end_year").disabled=false;
+                }
+            else{
+                document.getElementById("start_year").disabled=true;
+                document.getElementById("end_year").disabled=true;
             }
+        }
         // Script for Tooltip
         $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip(); 
+            $('[data-toggle="tooltip"]').tooltip(); 
             // Hiding Default Context Menu
-    document.addEventListener('contextmenu', event => event.preventDefault());
-});
-        
+            document.addEventListener('contextmenu', event => event.preventDefault());
+        });
     </script>
 </head>
 

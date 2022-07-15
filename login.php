@@ -23,11 +23,13 @@
 
         <!--Google Fonts-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
         <style>
             p{
                 margin: 50px;
             }
         </style>
+        
         <script>
             function upperChar(){
                 var uid = document.getElementById("login-username");
