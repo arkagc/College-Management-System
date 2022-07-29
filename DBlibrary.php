@@ -151,5 +151,5 @@
             $delpost=mysqli_query($this->conn, $stmt);
             return $delpost;
         }
-    //}
+    }
 ?>

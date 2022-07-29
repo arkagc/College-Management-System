@@ -9,13 +9,7 @@
     $user_id=$_SESSION['user_id'];
     $row=$db->getUserDetailHome($user_id);
     $row_post=$db->getPost();
-    $member=$db->groupMember();
-    
-    //echo $row_post['attachment_photo'];
-    //die;
-
-    
-    
+    $member=$db->groupMember();    
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -33,41 +27,40 @@
     <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    
     <style>
-    input[type=search] {
-    width: 130px;
-    height: 36px;
-    box-sizing: border-box;
-    border: 1px dimgrey;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: dimgrey;
-    background-image: url('images/search_icon.png');
-    background-position: 6px 0px; 
-    background-repeat: no-repeat;
-    margin-top: 10px;
-    margin-left: 15px;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+        input[type=search] {
+            width: 130px;
+            height: 36px;
+            box-sizing: border-box;
+            border: 1px dimgrey;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: dimgrey;
+            background-image: url('images/search_icon.png');
+            background-position: 6px 0px; 
+            background-repeat: no-repeat;
+            margin-top: 10px;
+            margin-left: 15px;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
         }
 
-    input[type=search]:focus {
-    width: 560px;
+        input[type=search]:focus {
+            width: 560px;
         }
         ::placeholder {
-    color: #d9d9d9;
-    opacity: 1; /* Firefox */
-}
+            color: #d9d9d9;
+            opacity: 1; /* Firefox */
+        }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: white;
-}
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: white;
+        }
 
-::-ms-input-placeholder { /* Microsoft Edge */
-   color: white;
-}
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: white;
+        }
         
         hr{
             display:block; 
@@ -82,110 +75,110 @@
         
         /* Image Thumbnail Style Sheet */
         #img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 150px;
-}
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }
 
-img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
+        img:hover {
+            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+        }
         /* Scroll bar style sheet*/
         /* width */
         ::-webkit-scrollbar {
-        width: 9px;
+            width: 9px;
         }
 
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-}
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey; 
+            border-radius: 10px;
+        }
  
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #cccccc; 
-    border-radius: 10px;
-}
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #cccccc; 
+            border-radius: 10px;
+        }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #a6a6a6; 
-}
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a6a6a6; 
+        }
         
     /*Scroll to top button style sheet*/
         #myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: rgba(26, 144, 255, 0.6);
-  color: white;
-  cursor: pointer;
-  padding: 8px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-}
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: rgba(26, 144, 255, 0.6);
+            color: white;
+            cursor: pointer;
+            padding: 8px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+        }
 
-#myBtn:hover {
-  background-color: rgba(26, 144, 255, 0.8);
-}
-    /* Like Button Style Sheet */
-       [id*="like"] {
-    font-size: 30px;
-    cursor: pointer;
-    user-select: none;
-    color: #4da9ff;
-}
+        #myBtn:hover {
+            background-color: rgba(26, 144, 255, 0.8);
+        }
+        /* Like Button Style Sheet */
+        [id*="like"] {
+            font-size: 30px;
+            cursor: pointer;
+            user-select: none;
+            color: #4da9ff;
+        }
         [id*="like"]:hover {
-  color: #1a90ff;
+            color: #1a90ff;
             font-size: 35px;
         }
 
-/**** See All Notification Button Style ****/
+        /**** See All Notification Button Style ****/
         .btnSee {
-  border-radius: 4px;
-  background-color: rgb(255,255,255);
-  border: none;
-  color: black;
-  text-align: center;
-  font-size: 14px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
+            border-radius: 4px;
+            background-color: rgb(255,255,255);
+            border: none;
+            color: black;
+            text-align: center;
+            font-size: 14px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
 
-.btnSee span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
+        .btnSee span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
 
-.btnSee span:after {
-  content: 'Notification \00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
+        .btnSee span:after {
+            content: 'Notification \00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
 
-.btnSee:hover span {
-  padding-right: 84px;
-}
+        .btnSee:hover span {
+            padding-right: 84px;
+        }
 
-.btnSee:hover span:after {
-  opacity: 1;
-  right: 0;
-}
+        .btnSee:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
         #suggestions {
             margin-left: 18px;
             font-size: 17px;
@@ -194,15 +187,13 @@ img:hover {
             z-index: 1;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
             border-width: 0;
-            border-radius: 0px 15px 15px 15px;
-            
-            
+            border-radius: 0px 15px 15px 15px;  
         }
         #suggestions a{
-         color: black;
-         font-family:Andika;
-        padding-left: 8px;
-        padding-bottom: 10px;
+            color: black;
+            font-family:Andika;
+            padding-left: 8px;
+            padding-bottom: 10px;
         
         }
         #suggestions a:hover{
@@ -215,105 +206,97 @@ img:hover {
         }        
         
 
-    /* Comment Button Style Sheet */
-    #comment {
-    font-size: 30px;
-    cursor: pointer;
-    user-select: none;
-    color: #66b5ff;
-    }
+        /* Comment Button Style Sheet */
+        #comment {
+            font-size: 30px;
+            cursor: pointer;
+            user-select: none;
+            color: #66b5ff;
+        }
 
-    #comment:hover {
-    color: #339cff;
-    }
+        #comment:hover {
+            color: #339cff;
+        }
     /* MODAL BUTTON STYLE */
-            .btn_confirm{
-                border-radius: 8px;
-                background-color: #4da9ff;
-                border: none;
-                color: #FFFFFF;
-                text-align: center;
-                font-size: 15px;
-                padding: 8px;
-                width: 100px;
-                transition: all 0.5s;
-                cursor: pointer;
-                margin: 5px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            }
-            .btn_confirm span {
-                cursor: pointer;
-                display: inline-block;
-                position: relative;
-                transition: 0.5s;
-            }
-            .btn_confirm span:after {
-                content: '\00bb';
-                position: absolute;
-                opacity: 0;
-                top: 0;
-                right: -20px;
-                transition: 0.5s;
-            }
-            .btn_confirm:hover span {
-                padding-right: 25px;
-            }
-            .btn_confirm:hover span:after {
-                opacity: 1;
-                right: 0;
-            }
-            .btn_confirm:hover {
-                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4), 0 6px 20px 0 rgba(0,0,0,0.19);
-                background-color: #1a90ff;
-            }
+        .btn_confirm{
+            border-radius: 8px;
+            background-color: #4da9ff;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 15px;
+            padding: 8px;
+            width: 100px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .btn_confirm span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        .btn_confirm span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        .btn_confirm:hover span {
+            padding-right: 25px;
+        }
+        .btn_confirm:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        .btn_confirm:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4), 0 6px 20px 0 rgba(0,0,0,0.19);
+            background-color: #1a90ff;
+        }
         
         #seeAll:hover{
             color: #1a90ff;
             font-size: 15px;
         }
-        
-        
-        
         #comment:hover{
             font-size: 35px;
         }
         
         /* Upload Image Button Style */
         .btn-upload {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-}
-.btn-upload input[type=file] {
-    position: absolute;
-    opacity: 0;
-    z-index: 0;
-    max-width: 100%;
-    height: 100%;
-    display: block;
-}
-.btn-upload .btn{
-    padding: 8px 20px;
-    background: #e0e0eb;
-    border: 1px solid #8383af;
-    color: black;
-    border: 1;
-}
-.btn-upload:hover .btn{
-    padding: 8px 20px;
-    background: #4da9ff;
-    color: #fff;
-    border: 0;
-}
-        
-/**** Post Button Style ****/
-        /* Upload Image Button Style */
-
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+        .btn-upload input[type=file] {
+            position: absolute;
+            opacity: 0;
+            z-index: 0;
+            max-width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .btn-upload .btn{
+            padding: 8px 20px;
+            background: #e0e0eb;
+            border: 1px solid #8383af;
+            color: black;
+            border: 1;
+        }
+        .btn-upload:hover .btn{
+            padding: 8px 20px;
+            background: #4da9ff;
+            color: #fff;
+            border: 0;
+        }
     </style>
+
     <script>
-    
         function validate(){
-            
             // Blank Post Validation
            var blankPost=document.getElementById("post").value;
             if(blankPost==""){
@@ -327,94 +310,88 @@ img:hover {
                 return false;
             }
         }
-    // Hiding Default Context Menu
-    document.addEventListener('contextmenu', event => event.preventDefault());
+        // Hiding Default Context Menu
+        document.addEventListener('contextmenu', event => event.preventDefault());
     
-    // Script for Scroll to Top Button
-    // When the user scrolls down 1200px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+        // Script for Scroll to Top Button
+        // When the user scrolls down 1200px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-    if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-        
-// Script for Tooltip
-        $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();   
-});
-
-// Multiple Image Upload
-        $(function() {
-    // Multiple images preview in browser
-    var imagesPreview = function(input, placeToInsertImagePreview) {
-
-        if (input.files) {
-            var filesAmount = input.files.length;
-
-            for (i = 0; i < filesAmount; i++) {
-                var reader = new FileReader();
-
-                reader.onload = function(event) {
-                    $($.parseHTML('<img>')).attr({src: event.target.result, height: "80px", width: "80px"}).appendTo(placeToInsertImagePreview);
-                    $($.parseHTML(' ')).appendTo(placeToInsertImagePreview);
-                }
-
-                reader.readAsDataURL(input.files[i]);
+        function scrollFunction() {
+            if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
             }
         }
 
-    };
-
-    $('#gallery-photo-add').on('change', function() {
-        imagesPreview(this, 'div.gallery');
-    });
-});
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
         
-// AJAX Calling for Search Users
+        // Script for Tooltip
+                $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();   
+        });
 
-  /*      $(document).click(function (event) {
-    if ($(event.target).parents("#suggestions").length === 0) {
-        $("#suggestions").hide();
-    }
-});*/
+        // Multiple Image Upload
+        $(function() {
+            // Multiple images preview in browser
+            var imagesPreview = function(input, placeToInsertImagePreview) {
+
+                if (input.files) {
+                    var filesAmount = input.files.length;
+
+                    for (i = 0; i < filesAmount; i++) {
+                        var reader = new FileReader();
+
+                        reader.onload = function(event) {
+                            $($.parseHTML('<img>')).attr({src: event.target.result, height: "80px", width: "80px"}).appendTo(placeToInsertImagePreview);
+                            $($.parseHTML(' ')).appendTo(placeToInsertImagePreview);
+                        }
+
+                        reader.readAsDataURL(input.files[i]);
+                    }
+                }
+            };
+
+            $('#gallery-photo-add').on('change', function() {
+                imagesPreview(this, 'div.gallery');
+            });
+        });
+        
+        // AJAX Calling for Search Users
+
+        /*      $(document).click(function (event) {
+            if ($(event.target).parents("#suggestions").length === 0) {
+                $("#suggestions").hide();
+            }
+        });*/
         function suggest_items(item)
-{
-	var dataString = "item=" + item;
-    //alert(dataString);
-		$.ajax({  
-			type: "POST",  
-			url: "autosuggestuser.php",  
-			data: dataString,
-			success: function(response)
-			{
-				$('#suggestions').html(response); // Display suggested users
-			}
-		}); 
-}
-//This function will fill in the input field for the country when clicked on a particular country from the suggested countries
+        {
+	        var dataString = "item=" + item;
+             //alert(dataString);
+            $.ajax({  
+                type: "POST",  
+                url: "autosuggestuser.php",  
+                data: dataString,
+                success: function(response)
+                {
+                    $('#suggestions').html(response); // Display suggested users
+                }
+            }); 
+        }
+        //This function will fill in the input field for the country when clicked on a particular country from the suggested countries
 
-function selected_item(value_brought) 
-{
-	$('#user').val(value_brought);
-	$('#suggestions').hide();
-}
-
-
-        
-        
-        
+        function selected_item(value_brought) 
+        {
+            $('#user').val(value_brought);
+            $('#suggestions').hide();
+        }
 </script>
-    </script>
+
 </head>
 <body style="background-color: #e0e0eb">
     <!-- Scroll to Top Button -->
@@ -628,16 +605,6 @@ function selected_item(value_brought)
                         ?>
                         </p>
                     <hr>
-                    <!--<div class="row">
-                        <div class="col-sm-1">
-                           <i class="fa fa-user" style="font-size: 25px"></i>
-                        </div>
-                        <div class="col-sm-10">
-                        <p style="font-family:Andika; font-size:18px; cursor: pointer;">
-                        <!--php comes here-->
-                        <!--</p>
-                        </div>
-                    </div>-->
                     
                     <div class="row" style="margin-bottom: 8px; text-align:left">
                         <div class="col-sm-12" style="overflow: hidden; padding-left: 0px; margin-left: 16px;">
@@ -768,22 +735,11 @@ function selected_item(value_brought)
                                 }
                                     </script>
                                     </div>
-                                    
-                     
-                                    
-                                    
-                                    
-                                    
                             </div>
-                                    
-                                
-                                
                                   <div class="col-sm-12">
                                     <div class="gallery">
                                     </div> 
                                 </div>
-                                
-                                
                         </form>
                     </div>
                 </div>
@@ -793,13 +749,8 @@ function selected_item(value_brought)
                 <div class="row" style="padding-left: 14px; padding-right: 14px; padding-top: 1px;">
                     <?php 
                     foreach($row_post as $post_det){ 
-                        $post_id=$post_det['post_id'];
-                        //echo $post_id;
-                        //die;
-                        
+                        $post_id=$post_det['post_id'];    
                     ?>
-                        
-                    
                 <div class="well" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); margin-right:13px; padding-left:1px;">
                     <!-- Post Header-->
                     <div class="row">
@@ -879,13 +830,7 @@ function selected_item(value_brought)
                                 <!--<img src="postdocs/<?php  echo $post_det['attachment_file']; ?>" style="width:280px">
                                 <object width="400" height="400" data="postdocs/<?php  echo $post_det['attachment_file']; ?>">
                                 </object>-->
-                            
-                            
-                          
-                            
                             <?php } ?>
-                            
-                            
                         </div>
                     </div>
                     <hr style="margin-left: 15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1)">
@@ -909,13 +854,11 @@ function selected_item(value_brought)
                         
                         $stmt3="select count(*) as like_count from user_like where post_id='$post_id' and user_id='$user_id'";
                         //echo $stmt3;
-                        
-                       
+        
                         $result3=mysqli_query($conn,$stmt3);
                         $row_count3=mysqli_fetch_array($result3);
                         $count_like_user=$row_count3['like_count'];
                         ?>
-                    
                         <?php 
                         //echo $count_like_user;
 						 if($count_like_user>0){
@@ -1007,9 +950,6 @@ function selected_item(value_brought)
                 </div> 
                     </div>
                     </div>
-                    
-                    
-                
                     <br>
                 <!-- Comment Text -->
                     <?php 
@@ -1060,8 +1000,6 @@ function selected_item(value_brought)
              
                 <!-- Endin div of Post Column-->
                 </div>
-
-            
 <!------------------------------------------------------------------------------------------------------->            <!-- Group Member Divider -->
             <div class="col-sm-2" style="padding-left:1px;">
                 <div class="well" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); height: 95%; position: fixed; overflow-y:scroll;">
@@ -1089,7 +1027,6 @@ function selected_item(value_brought)
                         </a></li>
                     <?php } ?>
                     </ul>
-                 
                 </div>
                 </div>
             </div>
@@ -1097,10 +1034,3 @@ function selected_item(value_brought)
   </div>
 </body>
 </html>
-
-
-
-
-
-
-  
