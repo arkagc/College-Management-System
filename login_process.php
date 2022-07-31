@@ -1,12 +1,10 @@
 <?php
 session_start();
-$user_id=$_POST["user_id"];
-$password=$_POST["password"];
-
 include 'DBlibrary.php';
 $db = new DBlibrary();
+$user_id=$_POST["user_id"];
+$password=$_POST["password"];
 $user=$db->userName($user_id);
-
 
 $res=$db->loginUser($user_id,$password);
 if($res==0){
