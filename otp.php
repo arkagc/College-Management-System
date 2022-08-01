@@ -1,10 +1,9 @@
 <?php
-$user_id=$_GET['user_id'];
-$phone=$_GET['phone'];
+    $user_id=$_GET['user_id'];
+    $phone=$_GET['phone'];
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <link rel="icon" href="images/favicon.ico">
     <title>OTP Verification</title>
@@ -25,8 +24,7 @@ $phone=$_GET['phone'];
         }
     </style>
     <script>
-    // Hiding Default Context Menu
-    document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
 </head>
     
@@ -65,10 +63,8 @@ $phone=$_GET['phone'];
                                 height:200px;margin:0 auto;"><br>
                     <h1 class="text-center">Verify your mobile number</h1><br>
                     <h4 class="text-center">This extra step shows its really you trying to register</h4><br>
-                    <!--<p class="lead" style="align:center"></p>-->
-                    
                     <p> 
-                    Thanks for giving your details. An OTP has been sent to your Mobile Number. Please enter the 6 digit OTP below for Successful Registration
+                        Thanks for giving your details. An OTP has been sent to your Mobile Number. Please enter the 6 digit OTP below for Successful Registration
                     </p>
                         
                     <p></p>
@@ -87,21 +83,15 @@ $phone=$_GET['phone'];
                             </div>
                             
                             <button type="submit" class="btn btn-primary col-sm-3">Verify</button>
-                            <center><a href="resend_otp.php?user_id=<?php echo $user_id ?>&phone=<?php echo $phone ?>" class="btn btn-link btn-md" role="button" style="color:red;">Resend OTP</a></center>
-                            </div>
-                            
+                                <center><a href="resend_otp.php?user_id=<?php echo $user_id ?>&phone=<?php echo $phone ?>" class="btn btn-link btn-md" role="button" style="color:red;">Resend OTP</a></center>
+                        </div>   
                     </form>
                     <br><br>
                 </div>
             </div>        
         </div>
         <div class="col-lg-3"></div>
-        
-        
-        <div class="col-lg-9"><p style="font-size: 15px; text-align:right;">Designed & Developed by Arka Ghosh Chowdhury</p></div>
-        
-          
+        <div class="col-lg-9"><p style="font-size: 15px; text-align:right;">Designed & Developed by Arka Ghosh Chowdhury</p></div>  
     </div>
 </body>
-
 </html>
