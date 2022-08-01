@@ -1,21 +1,15 @@
 <?php
     session_start();
  
- if (!isset($_SESSION['user_id'])){
-     echo "<script>alert('You are not logged In!'); window.location='login.php';</script>";
- }
+    if (!isset($_SESSION['user_id'])){
+        echo "<script>alert('You are not logged In!'); window.location='login.php';</script>";
+    }
     include 'DBlibrary.php';
     $db = new DBlibrary();
     $user_id=$_SESSION['user_id'];
     $row=$db->getUserDetailHome($user_id);
     $row_post=$db->getPost();
     $member=$db->groupMember();
-    
-    //echo $row_post['attachment_photo'];
-    //die;
-
-    
-    
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -39,145 +33,143 @@
             border-color: #b3b3b3;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.4)
         }
- #font
-   {
-     color:red;
-   }   
+    #font
+    {
+        color:red;
+    }   
     h1
-   {
-    text-align:center;
-	font-family:Gabriola;
-	font-size:45px;
-	color:white;
-	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-   }
+    {
+        text-align:center;
+        font-family:Gabriola;
+        font-size:45px;
+        color:white;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    }
     #background{
         background:url("images/background_notification_trans.png");
     }
-        input[type=search] {
-    width: 130px;
-    height: 36px;
-    box-sizing: border-box;
-    border: 1px dimgrey;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: dimgrey;
-    background-image: url('images/search_icon.png');
-    background-position: 6px 0px; 
-    background-repeat: no-repeat;
-    margin-top: 10px;
-    margin-left: 15px;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-        }
+    input[type=search] {
+        width: 130px;
+        height: 36px;
+        box-sizing: border-box;
+        border: 1px dimgrey;
+        border-radius: 8px;
+        font-size: 16px;
+        background-color: dimgrey;
+        background-image: url('images/search_icon.png');
+        background-position: 6px 0px; 
+        background-repeat: no-repeat;
+        margin-top: 10px;
+        margin-left: 15px;
+        padding: 12px 20px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
 
     input[type=search]:focus {
-    width: 560px;
-        }
-        ::placeholder {
-    color: #d9d9d9;
-    opacity: 1; /* Firefox */
-}
+        width: 560px;
+    }
+    ::placeholder {
+        color: #d9d9d9;
+        opacity: 1; /* Firefox */
+    }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: white;
-}
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: white;
+    }
 
-::-ms-input-placeholder { /* Microsoft Edge */
-   color: white;
-}
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: white;
+    }
     
      /* Scroll bar style sheet*/
         /* width */
-        ::-webkit-scrollbar {
+    ::-webkit-scrollbar {
         width: 9px;
-        }
+    }
 
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-}
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+    }
  
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #cccccc; 
-    border-radius: 10px;
-}
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #cccccc; 
+        border-radius: 10px;
+    }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #a6a6a6; 
-}
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #a6a6a6; 
+    }
  
-            #suggestions {
-            margin-left: 18px;
-            font-size: 17px;
-            background-color: white;
-            position: absolute; 
-            z-index: 1;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
-            border-width: 0;
-            border-radius: 0px 15px 15px 15px;
-            
-        }
-        #suggestions a{
-         color: black;
-         font-family:Andika;
+    #suggestions {
+        margin-left: 18px;
+        font-size: 17px;
+        background-color: white;
+        position: absolute; 
+        z-index: 1;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+        border-width: 0;
+        border-radius: 0px 15px 15px 15px; 
+    }
+    #suggestions a{
+        color: black;
+        font-family:Andika;
         padding-left: 8px;
         padding-bottom: 10px;
-        
-        }
-        #suggestions a:hover{
-            background-color: white;
-            display: block;
-            text-decoration: none;
-            background-color: #b3b3b3;
-            color: white;
-            font-size: 20px;
-        }
+    }
+    #suggestions a:hover{
+        background-color: white;
+        display: block;
+        text-decoration: none;
+        background-color: #b3b3b3;
+        color: white;
+        font-size: 20px;
+    }
     #seeAll:hover{
-            color: #1a90ff;
-            font-size: 15px;
+        color: #1a90ff;
+        font-size: 15px;
     }
     /**** See All Notification Button Style ****/
-        .btnSee {
-  border-radius: 4px;
-  background-color: rgb(255,255,255);
-  border: none;
-  color: black;
-  text-align: center;
-  font-size: 14px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
+    .btnSee {
+        border-radius: 4px;
+        background-color: rgb(255,255,255);
+        border: none;
+        color: black;
+        text-align: center;
+        font-size: 14px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
 
-.btnSee span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
+    .btnSee span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
 
-.btnSee span:after {
-  content: 'Notification \00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
+    .btnSee span:after {
+        content: 'Notification \00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
 
-.btnSee:hover span {
-  padding-right: 84px;
-}
+    .btnSee:hover span {
+        padding-right: 84px;
+    }
 
-.btnSee:hover span:after {
-  opacity: 1;
-  right: 0;
-}
+    .btnSee:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
  
 </style>
 <script>
@@ -188,31 +180,25 @@
         $("#suggestions").hide();
     }
 });*/
-        function suggest_items(item)
-{
-	var dataString = "item=" + item;
-    //alert(dataString);
-		$.ajax({  
-			type: "POST",  
-			url: "autosuggestuser.php",  
-			data: dataString,
-			success: function(response)
-			{
-				$('#suggestions').html(response); // Display suggested users
-			}
-		}); 
-}
+    function suggest_items(item)
+    {
+        var dataString = "item=" + item;
+        $.ajax({  
+            type: "POST",  
+            url: "autosuggestuser.php",  
+            data: dataString,
+            success: function(response)
+            {
+                $('#suggestions').html(response); // Display suggested users
+            }
+        }); 
+    }
 //This function will fill in the input field for the country when clicked on a particular country from the suggested countries
-
 function selected_item(value_brought) 
 {
 	$('#user').val(value_brought);
 	$('#suggestions').hide();
 }
-    
-
-
-
 </script>
 </head>
 <body id="background">
@@ -445,27 +431,25 @@ function selected_item(value_brought)
                 </div>
                     
                 <div class="row">
-               
-                <ul style="list-style-type:none; padding-left:14px;">
-                    <?php 
-                        foreach($member as $memberName){
-                    ?>
-                    <li><a href="profile_member.php?username=<?php echo $memberName['user_id']?>" style="text-decoration:none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Click to View">
-                        <?php if($memberName['profile_picture']==""){ ?>
-                        <img src="images/profile_avatar_30X30.png" class="img-rounded" style="height: 30px; width: 30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); border-radius: 50%; margin: 2px;">&nbsp;
-                        <?php } else { ?>
-                    
-                        <img src="profilephoto/<?php echo $memberName['profile_picture'];?>" class="img-rounded" style="height: 30px; width: 30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); border-radius: 50%; margin: 2px;">&nbsp;
-                        <?php } ?>
-                        <?php
-                        echo $memberName['first_name']." ".$memberName['last_name'];
+                    <ul style="list-style-type:none; padding-left:14px;">
+                        <?php 
+                            foreach($member as $memberName){
                         ?>
-                        </a></li>
-                    <?php } ?>
+                        <li><a href="profile_member.php?username=<?php echo $memberName['user_id']?>" style="text-decoration:none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Click to View">
+                            <?php if($memberName['profile_picture']==""){ ?>
+                            <img src="images/profile_avatar_30X30.png" class="img-rounded" style="height: 30px; width: 30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); border-radius: 50%; margin: 2px;">&nbsp;
+                            <?php } else { ?>
+                        
+                            <img src="profilephoto/<?php echo $memberName['profile_picture'];?>" class="img-rounded" style="height: 30px; width: 30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); border-radius: 50%; margin: 2px;">&nbsp;
+                            <?php } ?>
+                            <?php
+                            echo $memberName['first_name']." ".$memberName['last_name'];
+                            ?>
+                            </a></li>
+                        <?php } ?>
                     </ul>
-                 
                 </div>
-                </div>
+        </div>
     </div>
 </body>
 </html>
