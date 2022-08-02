@@ -13,7 +13,7 @@
     $deptfilter=($_POST["deptfilter"]);
     $status=1;
 
-/********* POST IMAGE UPLOAD ****************/
+    /********* POST IMAGE UPLOAD ****************/
     $error=array();
     $extension=array("jpeg","jpg","png","gif");
     foreach($_FILES["files"]["tmp_name"] as $key=>$tmp_name)
@@ -23,18 +23,11 @@
         $ext=pathinfo($file_name,PATHINFO_EXTENSION);
         if(in_array($ext,$extension))
         {
-            /* if(!file_exists("photo_gallery/".$txtGalleryName."/".$file_name))
-            {
-                move_uploaded_file($file_tmp=$_FILES["files"]["tmp_name"][$key],"photo_gallery/".$txtGalleryName."/".$file_name);
-            }
-            else
-            {*/
             $filename=basename($file_name,$ext);
             $newFileName=$filename.time().".".$ext;
-            //$img = $filename.time().".".$ext;
             $img=$img.";".$filename.time().".".$ext;
             move_uploaded_file($file_tmp=$_FILES["files"]["tmp_name"][$key],"postimage/".$newFileName);
-            }
+        }
         
         else
         {
@@ -48,22 +41,22 @@
     $extension=end($temp);
     if($extension!=""){
         if(in_array($extension,$allowedexts) && ($_FILES["vfiles"]["size"]<20971520))
-    {
-        if($_FILES["vfiles"]["error"]>0)
         {
-            echo "Error uploading video";
+            if($_FILES["vfiles"]["error"]>0)
+            {
+                echo "Error uploading video";
+            }
+            else
+            {
+                $newfilename = 'vid'.'_'.$user_id.'_'.round(microtime(true)) . '.' . $extension;
+                $vid = 'vid'.'_'.$user_id.'_'.round(microtime(true)) . '.' . $extension;
+                move_uploaded_file($_FILES["vfiles"]["tmp_name"],"postvideo/".$newfilename);
+            }
         }
         else
         {
-            $newfilename = 'vid'.'_'.$user_id.'_'.round(microtime(true)) . '.' . $extension;
-            $vid = 'vid'.'_'.$user_id.'_'.round(microtime(true)) . '.' . $extension;
-            move_uploaded_file($_FILES["vfiles"]["tmp_name"],"postvideo/".$newfilename);
+            echo "Sorry! Invalid File";
         }
-    }
-    else
-    {
-        echo "Sorry! Invalid File";
-    }
     }
 
 /********************* DOC FILES UPLOAD *************************/
@@ -72,22 +65,22 @@
     $extension=end($temp);
     if($extension!=""){
         if(in_array($extension,$allowedexts) && ($_FILES["docfiles"]["size"]<20971520))
-    {
-        if($_FILES["docfiles"]["error"]>0)
         {
-            echo "Error uploading video";
+            if($_FILES["docfiles"]["error"]>0)
+            {
+                echo "Error uploading video";
+            }
+            else
+            {
+                $newfilename = 'doc'.'_'.$user_id.'_'.round(microtime(true)) . '.' . $extension;
+                $attch = 'doc'.'_'.$user_id.'_'.round(microtime(true)) . '.' . $extension;
+                move_uploaded_file($_FILES["docfiles"]["tmp_name"],"postdocs/".$newfilename);  
+            }
         }
         else
         {
-            $newfilename = 'doc'.'_'.$user_id.'_'.round(microtime(true)) . '.' . $extension;
-            $attch = 'doc'.'_'.$user_id.'_'.round(microtime(true)) . '.' . $extension;
-            move_uploaded_file($_FILES["docfiles"]["tmp_name"],"postdocs/".$newfilename);  
+            echo "Sorry! Invalid File";
         }
-    }
-    else
-    {
-        echo "Sorry! Invalid File";
-    }
     }
     $result=$db->postUpload($user_id,$text_post,$img,$vid,$attch,$deptfilter,$status);
     header('Location: profile.php');
