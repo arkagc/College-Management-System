@@ -1,17 +1,15 @@
 <?php
     session_start();
  
- if (!isset($_SESSION['user_id'])){
-     echo "<script>alert('You are not logged In!'); window.location='login.php';</script>";
- }
+    if (!isset($_SESSION['user_id'])){
+        echo "<script>alert('You are not logged In!'); window.location='login.php';</script>";
+    }
     include 'DBlibrary.php';
     $db = new DBlibrary();
     $user_id=$_SESSION['user_id'];
     $row=$db->getUserDetailHome($user_id);
     $row_mypost=$db->myPost($user_id);
     $member=$db->groupMember();
-
-   
 ?>
 
 <! DOCTYPE html>
@@ -31,84 +29,84 @@
 
 <style>
     /**** Horizontal Rule Style Sheet ****/
-    hr{
+        hr{
             display:block; 
             border-width: 2px; 
             border-color: #d9d9d9;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1)
         }
         
-    input[type=search] {
-    width: 130px;
-    height: 36px;
-    box-sizing: border-box;
-    border: 1px dimgrey;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: dimgrey;
-    background-image: url('images/search_icon.png');
-    background-position: 6px 0px; 
-    background-repeat: no-repeat;
-    margin-top: 10px;
-    margin-left: 15px;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+        input[type=search] {
+            width: 130px;
+            height: 36px;
+            box-sizing: border-box;
+            border: 1px dimgrey;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: dimgrey;
+            background-image: url('images/search_icon.png');
+            background-position: 6px 0px; 
+            background-repeat: no-repeat;
+            margin-top: 10px;
+            margin-left: 15px;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
         }
 
-    input[type=search]:focus {
-    width: 560px;
+        input[type=search]:focus {
+            width: 560px;
         }
         ::placeholder {
-    color: #d9d9d9;
-    opacity: 1; /* Firefox */
-}
+            color: #d9d9d9;
+            opacity: 1; /* Firefox */
+        }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: white;
-}
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: white;
+        }
 
-::-ms-input-placeholder { /* Microsoft Edge */
-   color: white;
-}
-    /* Image Thumbnail Style Sheet */
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: white;
+        }
+        /* Image Thumbnail Style Sheet */
         #img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 150px;
-}
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }
 
-img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
+        img:hover {
+            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+        }
         /* Scroll bar style sheet*/
         /* width */
         ::-webkit-scrollbar {
         width: 9px;
         }
-            /* Scroll bar style sheet*/
+        /* Scroll bar style sheet*/
         /* width */
         ::-webkit-scrollbar {
         width: 9px;
         }
 
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-}
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey; 
+            border-radius: 10px;
+        }
  
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #cccccc; 
-    border-radius: 10px;
-}
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #cccccc; 
+            border-radius: 10px;
+        }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #a6a6a6; 
-}
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a6a6a6; 
+        }
  /*Scroll to top button style sheet*/
         #myBtn {
   display: none;
