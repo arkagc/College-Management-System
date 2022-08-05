@@ -106,53 +106,52 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #a6a6a6; 
         }
- /*Scroll to top button style sheet*/
+        /*Scroll to top button style sheet*/
         #myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: rgba(26, 144, 255, 0.6);
-  color: white;
-  cursor: pointer;
-  padding: 8px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-} 
-    #myBtn:hover {
-  background-color: rgba(26, 144, 255, 0.8);
-}
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: rgba(26, 144, 255, 0.6);
+            color: white;
+            cursor: pointer;
+            padding: 8px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+        } 
+        #myBtn:hover {
+            background-color: rgba(26, 144, 255, 0.8);
+        }
  
- /* Like Button Style Sheet */
-       [id*="like"] {
-    font-size: 30px;
-    cursor: pointer;
-    user-select: none;
-    color: #4da9ff;
-}
+        /* Like Button Style Sheet */
+        [id*="like"] {
+            font-size: 30px;
+            cursor: pointer;
+            user-select: none;
+            color: #4da9ff;
+        }
         [id*="like"]:hover {
-  color: #1a90ff;
+            color: #1a90ff;
             font-size: 35px;
         }
-}
-    /**** See All Notification Button Style ****/
+        /**** See All Notification Button Style ****/
         .btnSee {
-  border-radius: 4px;
-  background-color: rgb(255,255,255);
-  border: none;
-  color: black;
-  text-align: center;
-  font-size: 14px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
+            border-radius: 4px;
+            background-color: rgb(255,255,255);
+            border: none;
+            color: black;
+            text-align: center;
+            font-size: 14px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
 
 .btnSee span {
   cursor: pointer;
