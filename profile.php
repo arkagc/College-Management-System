@@ -160,14 +160,14 @@
             transition: 0.5s;
         }
 
-.btnSee span:after {
-  content: 'Notification \00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
+        .btnSee span:after {
+            content: 'Notification \00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
 
 .btnSee:hover span {
   padding-right: 84px;
