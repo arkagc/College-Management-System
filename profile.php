@@ -169,9 +169,9 @@
             transition: 0.5s;
         }
 
-.btnSee:hover span {
-  padding-right: 84px;
-}
+        .btnSee:hover span {
+            padding-right: 84px;
+        }
 
 .btnSee:hover span:after {
   opacity: 1;
