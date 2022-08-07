@@ -173,10 +173,10 @@
             padding-right: 84px;
         }
 
-.btnSee:hover span:after {
-  opacity: 1;
-  right: 0;
-}
+        .btnSee:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
 
 
     /* Comment Button Style Sheet */
