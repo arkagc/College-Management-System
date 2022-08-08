@@ -179,13 +179,13 @@
         }
 
 
-    /* Comment Button Style Sheet */
-    #comment {
-    font-size: 30px;
-    cursor: pointer;
-    user-select: none;
-    color: #66b5ff;
-    }
+        /* Comment Button Style Sheet */
+        #comment {
+            font-size: 30px;
+            cursor: pointer;
+            user-select: none;
+            color: #66b5ff;
+        }
 #comment:hover {
     color: #339cff;
     }
