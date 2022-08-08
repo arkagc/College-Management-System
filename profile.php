@@ -186,7 +186,7 @@
             user-select: none;
             color: #66b5ff;
         }
-#comment:hover {
+        #comment:hover {
     color: #339cff;
     }
     /* MODAL BUTTON STYLE */
