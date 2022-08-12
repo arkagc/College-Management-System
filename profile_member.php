@@ -8,13 +8,9 @@
     $db = new DBlibrary();
     $user_id=$_SESSION['user_id'];
     $username=$_GET["username"];
-  //  echo $username;
-//die;
     $row=$db->getUserDetailHome($username);
     $row_mypost=$db->myPost($username);
     $member=$db->groupMember();
-
-   
 ?>
 
 <! DOCTYPE html>
