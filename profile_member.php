@@ -1,9 +1,9 @@
 <?php
     session_start();
  
- if (!isset($_SESSION['user_id'])){
-     echo "<script>alert('You are not logged In!'); window.location='login.php';</script>";
- }
+    if (!isset($_SESSION['user_id'])){
+        echo "<script>alert('You are not logged In!'); window.location='login.php';</script>";
+    }
     include 'DBlibrary.php';
     $db = new DBlibrary();
     $user_id=$_SESSION['user_id'];
