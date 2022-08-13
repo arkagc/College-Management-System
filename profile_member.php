@@ -37,8 +37,8 @@
         }
         
     input[type=search] {
-    width: 130px;
-    height: 36px;
+        width: 130px;
+        height: 36px;
     box-sizing: border-box;
     border: 1px dimgrey;
     border-radius: 8px;
