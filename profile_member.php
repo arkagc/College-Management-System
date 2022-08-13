@@ -1,6 +1,5 @@
 <?php
     session_start();
- 
     if (!isset($_SESSION['user_id'])){
         echo "<script>alert('You are not logged In!'); window.location='login.php';</script>";
     }
@@ -28,7 +27,7 @@
     <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<style>
+    <style>
     /**** Horizontal Rule Style Sheet ****/
     hr{
             display:block; 
