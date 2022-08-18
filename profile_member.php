@@ -42,7 +42,7 @@
         box-sizing: border-box;
         border: 1px dimgrey;
         border-radius: 8px;
-    font-size: 16px;
+        font-size: 16px;
     background-color: dimgrey;
     background-image: url('images/search_icon.png');
     background-position: 6px 0px; 
