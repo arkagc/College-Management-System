@@ -47,7 +47,7 @@
         background-image: url('images/search_icon.png');
         background-position: 6px 0px; 
         background-repeat: no-repeat;
-    margin-top: 10px;
+        margin-top: 10px;
     margin-left: 15px;
     padding: 12px 20px 12px 40px;
     -webkit-transition: width 0.4s ease-in-out;
