@@ -50,7 +50,7 @@
         margin-top: 10px;
         margin-left: 15px;
         padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
+        -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
         }
 
