@@ -57,7 +57,7 @@
     input[type=search]:focus {
         width: 560px;
     }
-        ::placeholder {
+    ::placeholder {
     color: #d9d9d9;
     opacity: 1; /* Firefox */
 }
