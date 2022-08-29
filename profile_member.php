@@ -58,9 +58,9 @@
         width: 560px;
     }
     ::placeholder {
-    color: #d9d9d9;
+        color: #d9d9d9;
     opacity: 1; /* Firefox */
-}
+    }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: white;
