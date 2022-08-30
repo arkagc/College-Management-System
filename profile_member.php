@@ -62,7 +62,7 @@
         opacity: 1; /* Firefox */
     }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: white;
 }
 
