@@ -59,7 +59,7 @@
     }
     ::placeholder {
         color: #d9d9d9;
-    opacity: 1; /* Firefox */
+        opacity: 1; /* Firefox */
     }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
