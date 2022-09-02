@@ -64,7 +64,7 @@
 
     :-ms-input-placeholder { /* Internet Explorer 10-11 */
         color: white;
-}
+    }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
    color: white;
