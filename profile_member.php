@@ -66,7 +66,7 @@
         color: white;
     }
 
-::-ms-input-placeholder { /* Microsoft Edge */
+    ::-ms-input-placeholder { /* Microsoft Edge */
    color: white;
 }
     /* Image Thumbnail Style Sheet */
