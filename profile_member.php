@@ -68,7 +68,7 @@
 
     ::-ms-input-placeholder { /* Microsoft Edge */
         color: white;
-}
+    }
     /* Image Thumbnail Style Sheet */
         #img {
     border: 1px solid #ddd;
