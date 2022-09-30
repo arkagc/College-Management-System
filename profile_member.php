@@ -85,7 +85,7 @@
     /* width */
     ::-webkit-scrollbar {
         width: 9px;
-        }
+    }
             /* Scroll bar style sheet*/
         /* width */
         ::-webkit-scrollbar {
