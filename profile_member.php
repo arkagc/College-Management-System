@@ -98,8 +98,8 @@
         border-radius: 10px;
     }
  
-/* Handle */
-::-webkit-scrollbar-thumb {
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
     background: #cccccc; 
     border-radius: 10px;
 }
