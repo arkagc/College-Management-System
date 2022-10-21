@@ -101,7 +101,7 @@
     /* Handle */
     ::-webkit-scrollbar-thumb {
         background: #cccccc; 
-    border-radius: 10px;
+        border-radius: 10px;
 }
 
 /* Handle on hover */
