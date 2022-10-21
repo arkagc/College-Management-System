@@ -100,7 +100,7 @@
  
     /* Handle */
     ::-webkit-scrollbar-thumb {
-    background: #cccccc; 
+        background: #cccccc; 
     border-radius: 10px;
 }
 
