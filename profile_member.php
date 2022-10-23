@@ -102,9 +102,9 @@
     ::-webkit-scrollbar-thumb {
         background: #cccccc; 
         border-radius: 10px;
-}
+    }
 
-/* Handle on hover */
+    /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #a6a6a6; 
 }
