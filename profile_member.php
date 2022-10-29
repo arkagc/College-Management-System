@@ -108,8 +108,8 @@
     ::-webkit-scrollbar-thumb:hover {
         background: #a6a6a6; 
     }
- /*Scroll to top button style sheet*/
-        #myBtn {
+    /*Scroll to top button style sheet*/
+    #myBtn {
   display: none;
   position: fixed;
   bottom: 20px;
