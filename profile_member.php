@@ -110,7 +110,7 @@
     }
     /*Scroll to top button style sheet*/
     #myBtn {
-  display: none;
+        display: none;
   position: fixed;
   bottom: 20px;
   right: 30px;
