@@ -111,8 +111,8 @@
     /*Scroll to top button style sheet*/
     #myBtn {
         display: none;
-  position: fixed;
-  bottom: 20px;
+        position: fixed;
+        bottom: 20px;
   right: 30px;
   z-index: 99;
   font-size: 18px;
