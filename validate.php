@@ -1,4 +1,3 @@
-
 <?php
 $value=$_POST['name1'];
 $server="localhost";
@@ -17,5 +16,4 @@ else
 {
   echo '<span style="color:red">Invalid User Id</span>';
 }
-
 ?>
