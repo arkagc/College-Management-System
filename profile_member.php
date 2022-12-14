@@ -116,7 +116,7 @@
         right: 30px;
         z-index: 99;
         font-size: 18px;
-  border: none;
+        border: none;
   outline: none;
   background-color: rgba(26, 144, 255, 0.6);
   color: white;
