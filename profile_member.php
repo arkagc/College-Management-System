@@ -118,7 +118,7 @@
         font-size: 18px;
         border: none;
         outline: none;
-  background-color: rgba(26, 144, 255, 0.6);
+        background-color: rgba(26, 144, 255, 0.6);
   color: white;
   cursor: pointer;
   padding: 8px;
