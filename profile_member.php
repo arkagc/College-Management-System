@@ -119,8 +119,8 @@
         border: none;
         outline: none;
         background-color: rgba(26, 144, 255, 0.6);
-  color: white;
-  cursor: pointer;
+        color: white;
+        cursor: pointer;
   padding: 8px;
   height: 50px;
   width: 50px;
