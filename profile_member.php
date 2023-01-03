@@ -121,8 +121,8 @@
         background-color: rgba(26, 144, 255, 0.6);
         color: white;
         cursor: pointer;
-  padding: 8px;
-  height: 50px;
+        padding: 8px;
+        height: 50px;
   width: 50px;
   border-radius: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
