@@ -131,10 +131,11 @@
     #myBtn:hover {
         background-color: rgba(26, 144, 255, 0.8);
     }
+    
     /* Like Button Style Sheet */
- /* Like Button Style Sheet */
-       [id*="like"] {
-    font-size: 30px;
+    /* Like Button Style Sheet */
+    [id*="like"] {
+        font-size: 30px;
     cursor: pointer;
     user-select: none;
     color: #4da9ff;
