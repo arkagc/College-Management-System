@@ -138,8 +138,8 @@
         font-size: 30px;
         cursor: pointer;
         user-select: none;
-    color: #4da9ff;
-}
+        color: #4da9ff;
+    }
         [id*="like"]:hover {
   color: #1a90ff;
             font-size: 35px;
