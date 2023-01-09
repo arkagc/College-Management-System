@@ -136,8 +136,8 @@
     /* Like Button Style Sheet */
     [id*="like"] {
         font-size: 30px;
-    cursor: pointer;
-    user-select: none;
+        cursor: pointer;
+        user-select: none;
     color: #4da9ff;
 }
         [id*="like"]:hover {
