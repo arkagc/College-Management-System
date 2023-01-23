@@ -140,10 +140,11 @@
         user-select: none;
         color: #4da9ff;
     }
-        [id*="like"]:hover {
-  color: #1a90ff;
-            font-size: 35px;
-        }
+    
+    [id*="like"]:hover {
+        color: #1a90ff;
+        font-size: 35px;
+    }
 }
     /**** See All Notification Button Style ****/
         .btnSee {
