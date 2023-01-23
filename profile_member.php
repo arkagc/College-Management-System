@@ -147,9 +147,9 @@
     }
 }
     /**** See All Notification Button Style ****/
-        .btnSee {
-  border-radius: 4px;
-  background-color: rgb(255,255,255);
+    .btnSee {
+        border-radius: 4px;
+        background-color: rgb(255,255,255);
   border: none;
   color: black;
   text-align: center;
