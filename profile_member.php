@@ -152,8 +152,8 @@
         background-color: rgb(255,255,255);
         border: none;
         color: black;
-  text-align: center;
-  font-size: 14px;
+        text-align: center;
+        font-size: 14px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
