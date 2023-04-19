@@ -156,7 +156,7 @@
         font-size: 14px;
         transition: all 0.5s;
         cursor: pointer;
-  margin: 5px;
+        margin: 5px;
 }
 
 .btnSee span {
