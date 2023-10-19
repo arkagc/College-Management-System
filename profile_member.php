@@ -157,14 +157,14 @@
         transition: all 0.5s;
         cursor: pointer;
         margin: 5px;
-}
+    }
 
-.btnSee span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
+    .btnSee span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
 
 .btnSee span:after {
   content: 'Notification \00bb';
